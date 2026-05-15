@@ -1,0 +1,87 @@
+<div id="output"></div>
+
+<script>
+    const courses = [
+        "WAH Expiry Date (Practical)",
+        "WAH Expiry Date (Theoretical)",
+        "RA Expiry Date",
+        "FA Expiry Date",
+        "FF Expiry Date",
+        "EC Expiry Date",
+        "MCU Expiry Date"
+    ];
+    
+    fetch("https://script.google.com/macros/s/AKfycbzTQkW3b9Dxi7d0AMLF5FpWyMG09rtAGz7Nna-4ny-33eWwH9FfOd_fwtOHIiXH-EN4/exec?type=Sheet1Alkan&token=alkan111") // غيّر الرابط حسب السكربت بتاعك
+    .then(res => res.json())
+        .then(data => {
+
+            console.log("Data returned from API:", data);
+
+            const sectionStats = {}; // كل قسم هيتخزن فيه كورساته وتحليلها
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // نخلي اليوم ثابت بدون توقيت
+
+            data.forEach(user => {
+                const section = user["TypeOfSection"] || "Unknown";
+
+                if (!sectionStats[section]) {
+                    sectionStats[section] = {};
+                    courses.forEach(course => {
+                        sectionStats[section][course] = {
+                            valid: 0,
+                            expired: 0,
+                            notTaken: 0
+                        };
+                    });
+                }
+
+                courses.forEach(course => {
+                    const rawDate = user[course];
+                    if (!rawDate) {
+                        sectionStats[section][course].notTaken++;
+                        return;
+                    }
+
+                    const date = new Date(rawDate);
+                    if (isNaN(date.getTime())) {
+                        sectionStats[section][course].notTaken++;
+                    } else if (date < today) {
+                        sectionStats[section][course].expired++;
+                    } else {
+                        sectionStats[section][course].valid++;
+                    }
+                });
+            });
+
+            // عرض النتائج
+            const container = document.getElementById("output");
+
+            for (const section in sectionStats) {
+                const sectionDiv = document.createElement("div");
+                sectionDiv.innerHTML = `<h3>${section}</h3><table border="1" cellpadding="5" style="border-collapse: collapse;">
+          <tr>
+            <th>الكورس</th>
+            <th>✅ Valid</th>
+            <th>❌ Expired</th>
+            <th>❓ Not Taken</th>
+          </tr>
+        </table>`;
+
+                const table = sectionDiv.querySelector("table");
+
+                courses.forEach(course => {
+                    const stats = sectionStats[section][course];
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+            <td>${course}</td>
+            <td>${stats.valid}</td>
+            <td>${stats.expired}</td>
+            <td>${stats.notTaken}</td>
+          `;
+                    table.appendChild(row);
+                });
+
+                container.appendChild(sectionDiv);
+            }
+        });
+</script>

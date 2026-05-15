@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkan data for safety team</title>
+    <link rel="shortcut icon" href="https://alkancit.com//storage/companies/November2023/Z70W26UyPYgYExuSE8E6.png"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class=" containerForm d-flex align-items-center flex-column ">
+        <img src="https://alkancit.com//storage/companies/November2023/Z70W26UyPYgYExuSE8E6.png" alt="شعار الكان"
+            class="logo">
+        <div id="cardData" class="d-none flex-column p-2 ">
+            <div class="col-12 mx-auto d-flex justify-content-center align-items-center flex-column">
+                <span id="TypeOfSection"></span>
+                <div class="imgcontainer">
+                    <img src="" id="img"></img>
+                </div>
+                <h4 id="name"></h4>
+            </div>
+
+            <p class="m-0"><span class="nameOfFiled" style="min-width: 50px;">Jop :</span> <span id="title"></span></p>
+            <p class="m-0"><span class="nameOfFiled" style="min-width: 50px;">HR ID: </span> <span id="HR_ID"></span>
+            </p>
+            <p class="m-0"><span class="nameOfFiled" style="min-width: 50px;">ID :</span> <span id="National_ID"></span>
+            </p>
+            <p class="m-0" id="INSPPP"><span class="nameOfFiled" style="min-width: 50px;">INS# :</span> <span
+                    id="INC#"></span></p>
+        </div>
+    </div>
+
+    <div class=" containerForm d-flex align-items-center flex-column py-1 ">
+        <div id="cardData2" class="flex-column p-2 pt-0">
+            <div class="col-12 mx-auto d-flex justify-content-center align-items-center flex-column">
+                <div class="imgcontainer">
+                    <img src="" id="QRCode"></img>
+                </div>
+            </div>
+
+            <p class=""><span class="nameOfFiled">Tower Climbing:</span>
+                <span class="BoxTrue">
+                    <span id="WAH_Expiry_Date_Theoretical"></span>
+                </span>
+            </p>
+            <p class=""><span class="nameOfFiled">Risk Assessment :</span>
+            <span class="BoxTrue">
+                <span id="ra_expiry"></span>
+            </span>
+            </p>
+            <p class=""><span class="nameOfFiled">First Aid :</span>
+                <span class="BoxTrue">
+                    <span id="fa_expiry"></span>
+                </span>
+            </p>
+            <p class=""><span class="nameOfFiled">Fire Fighting :</span>
+                <span class="BoxTrue">
+                    <span id="ff_expiry"></span>
+                </span>
+            </p>
+            <p class=""><span class="nameOfFiled">Electricity :</span> 
+                <span class="BoxTrue">
+                    <span id="ec_expiry"></span>
+                </span>
+            </p>
+            <!-- <p class=""><span class="nameOfFiled">OSHA :</span> 
+                <span class="BoxTrue">
+                    <span id="OSHA"></span>
+                </span>
+            </p> -->
+
+            <div class="imgCars d-flex justify-content-evenly align-items-center ">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <img src="first_aid.png" alt="">
+                    <span>123</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <img src="Fire.jpg" alt="">
+                    <span>180</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <img src="Police_car.jpg" alt="">
+                    <span>122</span>
+                </div>
+            </div>
+
+
+            <div class="FooterIDCompany">
+                <h5>Eng.Mohamed Yasser</h5>
+                <h6>Alkan HSSE Senior Manager</h6>
+                <h6 class="call">Emergency Call : 01011109598</h6>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        const type = params.get("type");
+        fetch(`https://script.google.com/macros/s/AKfycbw2HcGDZnOKoMVwt8oPT5eV0BGfJemUEThInNlOr4bdlsdbFcn9IQmNDzmMt32uuYU/exec?id=${id}&type=${type}&token=alkan111`)
+            // fetch(`https://script.google.com/macros/s/AKfycbx0feY-WbbPMwERmLkexpKJtLuZyMgGdJRAiJ4RCKCmaejGdJRNSS-agphXuC6XyzESvA/exec?id=${id}&type=${type}&token=${token}`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.error === "Unauthorized") {
+                    document.getElementById("cardData").classList.remove("d-none");
+                    document.getElementById("cardData").classList.add("d-flex");
+                    document.getElementById("cardData").innerHTML = `<span class="me-2 p-2 text-danger">Token is incorrect.</span>`;
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
+                    return;
+                }
+
+                if (data.length > 0) {
+                    document.getElementById("cardData").classList.remove("d-none");
+                    document.getElementById("cardData").classList.add("d-flex");
+
+                    const user = data[0]; // ← نستخدم ده
+
+                    function formatDate(dateStr) {
+                        if (!dateStr) return "";
+                        const date = new Date(dateStr);
+                        if (isNaN(date.getTime())) return ""; // ← تجنب الخطأ هنا
+                        date.setDate(date.getDate() + 1); // نضيف يوم
+                        return date.toISOString().split("T")[0];
+                    }
+
+                    function setExpiryBadge(elementId, dateStr) {
+                        const date = new Date(dateStr);
+                        if (isNaN(date.getTime())) {
+                            document.getElementById(elementId).innerHTML = `<span class="">None</span>`;
+                            return;
+                        }
+
+                        date.setDate(date.getDate() + 1);
+                        const today = new Date();
+                        today.setHours(0, 0, 0, 0);
+
+                        const formatted = date.toISOString().split("T")[0];
+                        const isExpired = date < today;
+
+                        const badgeClass = isExpired ? "bg-danger" : "bg-success";
+                        const badgeText = isExpired ? `Expired: ${formatted}` : `Valid: ${formatted}`;
+
+                        document.getElementById(elementId).innerHTML = `<span class="badge ${badgeClass}">${badgeText}</span>`;
+                    }
+
+                    document.getElementById("National_ID").innerText = user["National ID"] || "None";
+                    document.getElementById("name").innerText = user["Name"] || "None";
+                    document.getElementById("img").src = user["img"] || "https://i1.wp.com/sarahmckenzie.org/wp-content/uploads/2019/05/Who_is_it.png?resize=403%2C379&ssl=1";
+                    document.getElementById("QRCode").src = user["QrCode"] || "https://i1.wp.com/sarahmckenzie.org/wp-content/uploads/2019/05/Who_is_it.png?resize=403%2C379&ssl=1";
+                    document.getElementById("title").innerText = user["Title"] || "None";
+                    document.getElementById("TypeOfSection").innerText = user["TypeOfSection"] || "None";
+                    document.getElementById("INC#").innerText = user["INC#"] || "None";
+                    document.getElementById("HR_ID").innerText = user["HR ID"] || "None";
+
+
+                    document.getElementById("ra_expiry").innerHTML = user["RA Expiry Date"] ? "&#10004;" : "";
+                    document.getElementById("fa_expiry").innerHTML = user["FA Expiry Date"] ? "&#10004;" : "";
+                    document.getElementById("ff_expiry").innerHTML = user["FF Expiry Date"] ? "&#10004;" : "";
+                    document.getElementById("ec_expiry").innerHTML = user["EC Expiry Date"] ? "&#10004;" : "";
+                    document.getElementById("WAH_Expiry_Date_Theoretical").innerHTML = user["WAH Expiry Date (Theoretical)"] ? "&#10004;" : "";
+                    document.getElementById("OSHA").innerHTML = user["OSHA"] ? "&#10004;" : "";
+
+
+
+                }
+            })
+    </script>
+
+
+
+</body>
+
+</html>
