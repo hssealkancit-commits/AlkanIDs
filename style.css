@@ -35,14 +35,15 @@ hr {
   position: relative;
   z-index: 1;
   padding: 10px 0;
-  width: 460PX;
+  width: 280PX;
+  height: 350;
 }
 
 
 .logo {
   display: block;
-  margin: 0 auto 15px;
-  width: 100px;
+  margin: 0 auto 5px;
+  width: 65px;
 }
 
 .cardForm {
@@ -147,7 +148,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 3px 0;
+  margin: 0;
 }
 #cardData p {
  display: flex;
@@ -158,6 +159,7 @@ hr {
 
 .nameOfFiled {
   color: #202795;
+  font-size: 15px;
 }
 .titleOfFileds {
   color: rgb(99 4 4);
@@ -167,6 +169,7 @@ hr {
   color: #202795;
   padding: 5px;
   border-radius: 6px;
+  font-size: 17px;
 }
 .badge { 
     font-size: 13px;
@@ -174,15 +177,14 @@ hr {
 
 
 .imgcontainer {
-  width: 140px;
-  height: 140px;
-  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   margin-bottom: 5px;
 }
 .imgcontainer img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
 
 
@@ -199,8 +201,8 @@ hr {
   padding: 5px;
   background-color: #ddd;
   border-radius: 3px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,6 +212,11 @@ hr {
   text-align: center;
   color: #202795;
 }
+.FooterIDCompany h5,
+.FooterIDCompany h6{
+  font-size: 15px !important;
+}
+
 .FooterIDCompany h6{
   margin: 0;
 }
@@ -220,8 +227,8 @@ hr {
 }
 
 .imgCars img{
-  width: 50px;
-  height: 50px;
+  width: 37px;
+  height: 37px;
   border-radius: 3px;
   object-fit: contain;
 }
