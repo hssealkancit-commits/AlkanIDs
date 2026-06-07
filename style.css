@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #ddd;
+ 
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -36,7 +36,8 @@ hr {
   z-index: 1;
   padding: 10px 0;
   width: 280PX;
-  height: 350;
+  height: 350px;
+    border: 1px solid #eee;
 }
 
 
@@ -243,17 +244,20 @@ margin-bottom: 3px;
 
 
 @media print {
+
   body {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    display: block !important;
   }
 
   .containerForm {
+    width: 280px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     page-break-after: always;
   }
 }
