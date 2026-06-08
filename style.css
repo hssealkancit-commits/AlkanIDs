@@ -22,6 +22,7 @@ p {
 
 span {
   font-weight: bold;
+  font-size: 11px;
 }
 hr {
   z-index: -2;
@@ -30,14 +31,14 @@ hr {
 
 .containerForm {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* border-radius: 10px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   position: relative;
   z-index: 1;
   padding: 10px 0;
-  width: 280PX;
-  height: 350px;
-    border: 1px solid #eee;
+  width: 5cm;
+  height: 9cm;
+  border: 1px solid #747171;
 }
 
 
@@ -160,7 +161,7 @@ hr {
 
 .nameOfFiled {
   color: #202795;
-  font-size: 15px;
+  font-size: 11px;
 }
 .titleOfFileds {
   color: rgb(99 4 4);
@@ -170,7 +171,7 @@ hr {
   color: #202795;
   padding: 5px;
   border-radius: 6px;
-  font-size: 17px;
+  font-size: 14px;
 }
 .badge { 
     font-size: 13px;
@@ -215,7 +216,7 @@ hr {
 }
 .FooterIDCompany h5,
 .FooterIDCompany h6{
-  font-size: 15px !important;
+  font-size: 13px !important;
 }
 
 .FooterIDCompany h6{
@@ -233,13 +234,7 @@ hr {
   border-radius: 3px;
   object-fit: contain;
 }
-.imgCars span{
-padding: 1px 10px;
-border: 3px solid #1f2029;
-border-radius: 5px;
-font-size: 14px;
-margin-bottom: 3px;
-}
+.imgCars span{padding: 1px 10px;border: 1px solid #1f2029;border-radius: 5px;font-size: 10px;margin-bottom: 3px;}
 
 
 
